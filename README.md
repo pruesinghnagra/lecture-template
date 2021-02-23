@@ -1,7 +1,7 @@
-### Boiling a plate for me.
+# Lecture template
 
-- Going to contain some cool shit that will freak you the fuck out.
+### Kia ora friends! Here are some handy notes for our slide deck template.
 
-### Notes about the shit in here:
+- Components in Spectacle can accept either a value label such as primary or a raw CSS value like #f00. The label primary returns #f00 since the backgroundColor prop (CSS property background-color) is mapped to the colors theme key
 
-- DB and Routes contain dummy code.
+- A template in Spectacle is a fixed overlay of components that are presented on every slide. They are similar to masters in Keynote or PowerPoint. It’s a function prop that has a single optional config object containing current slide and total slide count and returns a React Node.
