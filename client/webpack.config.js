@@ -21,11 +21,23 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
-      }
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        use: {
+          loader: 'url-loader',
+        },
+      },
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    fallback: { 
+      "assert": false, 
+      "util": false 
+    }
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
 }
+
+
