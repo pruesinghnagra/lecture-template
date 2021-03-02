@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  entry: ['./client/index.js', './client/styles/main.scss'],
+  entry: ['./client/index.js'],
   output: {
     path: path.join(__dirname, '..', 'server', 'public'),
     filename: 'bundle.js'
@@ -15,14 +15,6 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.s[ac]ss$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      },
-      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         use: {
           loader: 'url-loader',
@@ -31,11 +23,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
-    fallback: { 
-      "assert": false, 
-      "util": false 
-    }
+    extensions: ['.js', '.jsx']
   },
   devtool: 'source-map',
 }
